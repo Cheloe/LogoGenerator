@@ -36,7 +36,7 @@ inquirer
 
 function writeFile(logo) {
     //logo = JSON.stringify(logo);
-    fs.writeFile('./logos/logo.svg', logo, (err) => {
+    fs.writeFile('./logos/newLogo.svg', logo, (err) => {
         if (err) throw err;
         console.log('The file has been saved!');
         }   
