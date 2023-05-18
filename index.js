@@ -24,7 +24,7 @@ inquirer
         {
             type: 'list',
             message: 'What color should the text be?',
-            choices: ['red', 'orange', 'yellow', 'green', 'blue', 'teal','black', 'white'],
+            choices: ['red', 'orange', 'yellow', 'green', 'blue','black', 'white'],
             name: 'textColor'
         },
     ])
@@ -36,7 +36,7 @@ inquirer
 
 function writeFile(logo) {
     //logo = JSON.stringify(logo);
-    fs.writeFile('./examples/logo.svg', logo, (err) => {
+    fs.writeFile('./logos/logo.svg', logo, (err) => {
         if (err) throw err;
         console.log('The file has been saved!');
         }   
