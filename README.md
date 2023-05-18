@@ -1,10 +1,15 @@
 # LogoGenerator
 Generate custom SVG logos from command line prompts
 
-TODO: 
-- make Shapes.drawshape() pull "this" from  the proper scope
-- create a function that takes in the svg string from drawshape(), and renders it properly as an svg shape
-- control user input for shape size, color, etc. so they can't create a crazy logo.
-- make sure test for shape works properly. 
-- update readme with instructions on how to use the program
-- figure out how to save the svg file to a the exaples folder rather than the root directory
+## Here's What I did:
+- Wrote Inquirer prompts to capture user preferences
+- Created a class called shapes that captures user input and renders it to an SVG file
+- Wrote tests for the shapes class to check that the object works as expected and that the svg file is created as expected
+- Wrote method on the shapes class to style each shape properly
+- Wrote method on the shapes class that renders custom colors because browser defaults are ugly
+- Wrote and formatted README
+- Created video of the app in action
+
+Demo videos of the app in action are in the `demos` folder
+
+## <a href="https://github.com/Cheloe/LogoGenerator">Github Repository</a>
