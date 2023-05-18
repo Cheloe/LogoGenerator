@@ -10,45 +10,33 @@ inquirer
             choices: ['triangle', 'square', 'circle'],
             name: 'desiredShape'
         },
-        // {
-        //     type: 'input',
-        //     message: 'What shape would you like your shape to be?',
-        //     name: 'desiredShape'
-        // },
         {
-            type: 'input',
-            message: 'What color would you like your shape to be?',
+            type: 'list',
+            message: 'What color should your logo be?',
+            choices: ['red', 'orange', 'yellow', 'green', 'blue','black', 'white'],
             name: 'color'
         },
         {   
             type: 'input',
-            message: 'What are your initial (first, middle, last)?',
+            message: 'What are your initials (first, middle, last)?',
             name: 'initials'
         },
         {
-            type: 'input',
-            message: 'What color would you like your initials to be?',
+            type: 'list',
+            message: 'What color should the text be?',
+            choices: ['red', 'orange', 'yellow', 'green', 'blue', 'teal','black', 'white'],
             name: 'textColor'
         },
     ])
         .then((response) => {
             let logo = new Shapes(response.desiredShape,response.color, response.initials, response.textColor);
             console.log(logo);
-            //logo.drawShape();
             writeFile(logo.drawShape());
         })
-        // .then(() => {
-        //     logo = JSON.stringify(logo);
-        //     fs.writeFile('logo.svg', logo, (err) => {
-        //         if (err) throw err;
-        //         console.log('The file has been saved!');
-        //     });
-        // });
-
 
 function writeFile(logo) {
     //logo = JSON.stringify(logo);
-    fs.writeFile('logo.svg', logo, (err) => {
+    fs.writeFile('./examples/logo.svg', logo, (err) => {
         if (err) throw err;
         console.log('The file has been saved!');
         }   
