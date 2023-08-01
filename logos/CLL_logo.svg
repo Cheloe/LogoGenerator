@@ -3,7 +3,7 @@
 width="200" height="200"
 xmlns="http://www.w3.org/2000/svg">
 
-<polygon points="95,0 0,170 190,170" style="fill:#F3722C;"/>
+<polygon points="95,0 0,170 190,170" style="fill:#F94144;"/>
 
-<text x="94" y="125" font-size="20" text-anchor="middle" fill="#F94144" style="font: bold 42px sans-serif;">CLL</text>
+<text x="94" y="125" font-size="20" text-anchor="middle" fill="#90BE6D" style="font: bold 42px sans-serif;">CLL</text>
 </svg>
