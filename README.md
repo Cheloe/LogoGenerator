@@ -3,13 +3,12 @@ Generate custom SVG logos from command line prompts
 
 ## Here's What I did:
 - Wrote Inquirer prompts to capture user preferences
-- Created a class called shapes that captures user input and renders it to an SVG file
-- Wrote tests for the shapes class to check that the object works as expected and that the svg file is created as expected
-- Wrote method on the shapes class to style each shape properly
-- Wrote method on the shapes class that renders custom colors because browser defaults are ugly
+- Created a Shapes class that captures color and letter options common to all shapes
+- Created Triangle, Square, and Circle classes that return svg code acc to choice
+- Wrote test for the shapes class to check that the object works as expected
+- Wrote tests for the triangle, square, and circle classes to make sure objects behave as expected
 - Wrote and formatted README
 - Created video of the app in action
 
-Demo videos of the app in action are in the `demos` folder
 
 ## <a href="https://github.com/Cheloe/LogoGenerator">Github Repository</a>

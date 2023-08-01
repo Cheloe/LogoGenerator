@@ -1,4 +1,8 @@
-const Shapes = require('./lib/shapes.js').Shapes;
+// const Shapes = require('./lib/shapes.js').Shape;
+const Triangle = require('./lib/shapes.js').Triangle;
+const Square = require('./lib/shapes.js').Square;
+const Circle = require('./lib/shapes.js').Circle;
+
 const inquirer = require('inquirer');
 const fs = require('fs');
 
@@ -28,19 +32,28 @@ inquirer
             name: 'textColor'
         },
     ])
-        .then((response) => {
-            let logo = new Shapes(response.desiredShape,response.color, response.initials, response.textColor);
-            console.log(logo);
-            writeFile(logo.drawShape());
-        })
 
-function writeFile(logo) {
-    //logo = JSON.stringify(logo);
-    fs.writeFile('./logos/newLogo.svg', logo, (err) => {
+        .then((response) => {
+            if (response.desiredShape === 'triangle') {
+                let logo = new Triangle(response.color, response.initials, response.textColor);
+                writeFile(response.initials, logo.drawLogo());
+            } else if (response.desiredShape === 'square') {
+                let logo = new Square(response.color, response.initials, response.textColor);
+                writeFile(response.initials, logo.drawLogo());
+            } else if (response.desiredShape === 'circle') {
+                let logo = new Circle(response.color, response.initials, response.textColor);
+                writeFile(response.initials, logo.drawLogo());
+            }
+        });
+
+
+function writeFile(initials, logo) {
+    const fileName = `./logos/${initials.toUpperCase()}_logo.svg`;
+
+    fs.writeFile(fileName, logo, (err) => {
         if (err) throw err;
-        console.log('The file has been saved!');
-        }   
-    )
+        console.log(`Logo for initials "${initials}" has been saved as "${fileName}"!`);
+    });
 }
 
     
