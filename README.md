@@ -10,5 +10,7 @@ Generate custom SVG logos from command line prompts
 - Wrote and formatted README
 - Created video of the app in action
 
+## Link to video: 
+https://drive.google.com/file/d/1cVnIi1lQ73GqMtWwceenm4_ENUfUtHIt/view?usp=sharing
 
 ## <a href="https://github.com/Cheloe/LogoGenerator">Github Repository</a>
